@@ -1,41 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+}
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  background: #aaa;
+  color: #333;
+  /* I'll give you this one for free lol */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-  
-.para, .small-para {
-    color: hsl(0, 0%, 0%);
-    font-weight: 800;
+
+.modal {
+  background: white;
+  width: 480px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
 }
-  
-.para.small-para {
-    font-size: 14px;
-    font-weight: 800;
+
+.icon {
+  color: royalblue;
+  font-size: 26px;
+  font-weight: 700;
+  background: lavender;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-  
-.para {
-    font-size: 22px;
+
+.close-button {
+  background: #eee;
+  border-radius: 50%;
+  color: #888;
+  font-weight: 400;
+  font-size: 16px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #eee;
+  padding: 0;
 }
-  
-#confirm-button {
-    background: green;
-    color: white;
+
+button {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+button.continue {
+  background: royalblue;
+  border: 1px solid royalblue;
+  color: white;
+}
+
+button.cancel {
+  background: white;
+  border: 1px solid #ddd;
+  color: royalblue;
+}
+
+
+/* Solution */
+.modal {
+    padding: 16px;
+    display: flex;
+    gap: 16px;
+}
+
+.header {
     font-weight: bold;
-} 
-  
-.button {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-}
-  
-.text.child {
-    color: rgb(0, 0, 0);
-    font-weight: 800;
-    font-size: 14px;
-}
-  
-div.text {
-    color: rgb(0, 0, 0);
     font-size: 22px;
-    font-weight: 100;
+}
+
+.icon {
+    flex-shrink: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.close-button {
+    align-self: flex-end;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
