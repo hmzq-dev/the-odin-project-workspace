@@ -16,6 +16,19 @@ function lastLetter(text) {
 }
 
 
+function fizzBuzz(number) {
+    for (let i = 1; i <= number; i++) {
+        let stringToDisplay = `${i}: `
+        if (i % 3 === 0) {
+            stringToDisplay += "Fizz"
+        } 
+        if (i % 5 === 0) {
+            stringToDisplay += "Buzz"
+        }
+        console.log(stringToDisplay)
+    }
+}
 
 
-console.log(lastLetter("United States"));
+input = parseInt(prompt("Enter a number: "));
+fizzBuzz(input);
