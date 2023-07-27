@@ -1,34 +1,15 @@
-function add7(number) {
-    return number + 7;
-}
-
-
-function multiply(number1, number2) {
-    return number1 * number2;
-}
-
-function capitalize(text) {
-    return text.toUpperCase()[0] + text.substr(1, text.length)
-}
-
-function lastLetter(text) {
-    return text[text.length-1]
-}
-
-
-function fizzBuzz(number) {
-    for (let i = 1; i <= number; i++) {
-        let stringToDisplay = `${i}: `
-        if (i % 3 === 0) {
-            stringToDisplay += "Fizz"
-        } 
-        if (i % 5 === 0) {
-            stringToDisplay += "Buzz"
+function getPrimeNumbers(end) {
+    const primeNumbers = [];
+    primeLoop: 
+    for (let num = 2; num <= end; num++) {
+        for (let divisor = 2; divisor < num; divisor++) {
+            if (num % divisor === 0) {
+                continue primeLoop;
+            }
         }
-        console.log(stringToDisplay)
+        primeNumbers.push(num)
     }
+    return primeNumbers;
 }
 
-
-input = parseInt(prompt("Enter a number: "));
-fizzBuzz(input);
+console.log(getPrimeNumbers(100).join(", "))
