@@ -1,9 +1,4 @@
-@font-face {
-    font-family: "CodeNewRomanRegular";
-    src: url("cnr.otf");
-}
-
-
-h1 {
-    font-family: "CodeNewRomanRegular", Arial;
+.group1::selection {
+    font-style: underline;
+    background-color: red;
 }
