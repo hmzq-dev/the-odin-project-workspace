@@ -1,4 +1,40 @@
-.group1::selection {
-    font-style: underline;
-    background-color: red;
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+.nav {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-evenly;
+    height: 200px;
+    align-items: center;
+    position: sticky;
+    top: 1px;
+}
+
+main {
+    height: 1000px;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav > div {
+    font-size: 2rem;
+}
+
+.img {
+    background-color: red;
+    height: 200px;
+    width: 20%;
+    position: absolute;
+    bottom: 10px;
+}
+
+.text {
+    width: 70%;
+}
+
