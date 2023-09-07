@@ -1,40 +1,25 @@
+:root.light {
+    --background-color: white;
+    --primary-color: black;
+    --border: 2px solid black;
+}
+
+:root.dark {
+    --background-color: black;
+    --primary-color: white;
+    --border: 2px solid white;
+}
+
 body {
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    background-color: var(--background-color, white);
 }
 
-.nav {
-    background-color: aquamarine;
-    display: flex;
-    justify-content: space-evenly;
-    height: 200px;
-    align-items: center;
-    position: sticky;
-    top: 1px;
+p, button {
+    color: var(--primary-color);
 }
 
-main {
-    height: 1000px;
-    padding: 20px;
-    display: flex;
-    gap: 10px;
+button {
+    border: var(--border, 2px solid black);
+    padding: 3px 5px;
+    background-color: var(--background-color);
 }
-
-.nav > div {
-    font-size: 2rem;
-}
-
-.img {
-    background-color: red;
-    height: 200px;
-    width: 20%;
-    position: absolute;
-    bottom: 10px;
-}
-
-.text {
-    width: 70%;
-}
-
