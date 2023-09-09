@@ -5,10 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A maiores ex ea odio eveniet eos eum ratione tempore necessitatibus! Quasi eos, libero inventore maxime magni qui illum dolorem quod corrupti?</p>
-    <button>Toggle theme</button>
+    <form action="#" method="post">
+        <div>
+            <label for="username">Username: </label>
+            <input type="text" id="username">
+        </div>
+
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" id="password">
+        </div>
+
+        <div>
+            <select name="gender">
+                <option value="none" disabled hidden selected>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div>
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">Remember Me</label>
+        </div>
+
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
 </body>
 </html>
