@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <form action="/my-handling-form-page" method="post">
-        <ul>
-            <li>
-                <label for="username">Username: </label>
-                <input type="text" id="username">
-            </li>
-            <li>
-                <label for="email">Email: </label>
-                <input type="email" id="email">
-            </li>
-            <li>
-                <label for="message">Message: </label>
-                <textarea id="message"></textarea>
-            </li>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My test page</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form>
+        <fieldset>
+            <legend>Personal details</legend>
+            <ul>
+                <li>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                </li>
+                <li>
+                    <label for="age">Age: </label>
+                    <input type="number" id="age" name="age">
+                </li>
+            </ul>
+        </fieldset>
 
-            <li class="button">
-                <button type="submit">Send your message</button>
-            </li>
-        </ul>
+        <fieldset>
+            <legend>Comment information</legend>
+            <ul>
+                <li>
+                    <label for="comment">Comment: </label>
+                    <input type="text" id="comment" name="comment">
+                </li>
+                <li>
+                    <label for="email">Email: </label>
+                    <input type="email" id="email" name="email">
+                </li>
+            </ul>
+        </fieldset>
     </form>
-    
-</body>
+  </body>
 </html>
