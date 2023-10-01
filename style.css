@@ -1,33 +1,31 @@
-body {
-    background-color: #fff;
-    color: #333;
-    font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
-    padding: 1em;
-    margin: 0;
-}
-
 * {
     box-sizing: border-box;
 }
 
-ul {
-    list-style: none;
+body {
+    height: 90vh;
 }
 
-li {
-    margin-bottom: 5px;
+.container {
+    display: grid;
+    background-color: darkcyan;
+    border: 1px solid black;
 }
 
-input:focus {
-    border: 2px solid black;
+.grid-item {
+    width: 50px;
+    height: 50px;
+    background-color: lightblue;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-input:invalid:required {
-    border: 2px solid red;
-}
-
-
-label::after {
-    content: " *";
-    color: red;
+/* Write code from here */
+.container {
+    grid-template-columns: 100px 100px;
+    grid-template-rows: 100px 100px;
+    grid-auto-rows: 100px 100px;
+    gap: 10px;
 }
