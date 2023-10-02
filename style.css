@@ -10,6 +10,8 @@ body {
     display: grid;
     background-color: darkcyan;
     border: 1px solid black;
+    height: 300px;
+    width: 300px;
 }
 
 .grid-item {
@@ -24,8 +26,7 @@ body {
 
 /* Write code from here */
 .container {
-    grid-template-columns: 100px 100px;
-    grid-template-rows: 100px 100px;
-    grid-auto-rows: 100px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 10px;
 }
