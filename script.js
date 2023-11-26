@@ -1,3 +1,7 @@
+Book.prototype.sayHi = function() {
+    console.log("hey");
+}
+
 function Book(title, author, numberOfPages, read) {
     this.title = title;
     this.author = author;
@@ -11,3 +15,4 @@ function Book(title, author, numberOfPages, read) {
 
 const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, true);
 console.log(theHobbit.info());
+theHobbit.sayHi();
