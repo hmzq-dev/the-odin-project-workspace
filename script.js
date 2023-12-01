@@ -1,18 +1,34 @@
-Book.prototype.sayHi = function() {
-    console.log("hey");
+Hero.prototype.greet = function() {
+    return `${this.name} says hello`;
 }
 
-function Book(title, author, numberOfPages, read) {
-    this.title = title;
-    this.author = author;
-    this.numberOfPages = numberOfPages;
-    this.read = read;
-
-    this.info = function() {
-        return `${this.title} by ${this.author}, ${this.numberOfPages} pages, ${read ? "read" : "not read yet"}`;
-    }
+function Hero(name, level) {
+    this.name = name;
+    this.level = level;
 }
 
-const theHobbit = new Book("The Hobbit", "J.R.R Tolkien", 295, true);
-console.log(theHobbit.info());
-theHobbit.sayHi();
+function Warrior(name, level, weapon) {
+    Hero.call(this, name, level);
+    this.weapon = weapon;
+}
+
+function Healer(name, level, spell) {
+    Hero.call(this, name, level);
+    this.spell = spell;
+}
+
+Object.setPrototypeOf(Warrior.prototype, Hero.prototype);
+Object.setPrototypeOf(Healer.prototype, Hero.prototype);
+
+
+Warrior.prototype.attack = function () {
+  return `${this.name} attacks with the ${this.weapon}.`;
+}
+
+Healer.prototype.heal = function () {
+  return `${this.name} casts ${this.spell}.`;
+}
+
+
+const hero1 = new Warrior('Bjorn', 1, 'axe');
+const hero2 = new Healer('Kanin', 1, 'cure');
